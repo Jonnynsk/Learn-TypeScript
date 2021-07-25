@@ -177,7 +177,17 @@ console.log(id);  // 234
 	
 Подобным образом можно использовать union для определения параметров функции:
 ```js	
-const printId = (id: number|string) => {
+const printId = (id: number|string): void => {
     console.log(`Id: ${id}`);
 }
+```
+### type
+	
+В TypeScript есть возможность создавать свои типы, называемые Type Aliases. Создаётся собственный тип через ключевое слово type.
+```js	
+type Human = {firstName: string, age: number, height: number}
+```	
+В примере выше создаётся собственный тип Human, содержащий 3 разных свойства. Пример создания объекта типа Human:
+```js	
+const human: Human = {firstName: ‘Franz’, age: 32, height: 185}
 ```
