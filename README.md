@@ -181,7 +181,7 @@ const printId = (id: number|string): void => {
     console.log(`Id: ${id}`);
 }
 ```
-### type
+### Type Aliases
 	
 В TypeScript есть возможность создавать свои типы, называемые Type Aliases. Создаётся собственный тип через ключевое слово type.
 ```js	
