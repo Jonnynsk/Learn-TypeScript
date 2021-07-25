@@ -148,3 +148,36 @@ const pitfall = (): never => {
 // Error → Type 'undefined' is not assignable to type 'never'.
 ```
 never можно представить себе как вариант запрета использовать ключевое слово return в функции.
+	
+### object
+	
+Тип object в TypeScript определяет все не примитивные типы, то есть тип, который не является number, string, boolean, symbol, null или undefined. Этот тип был введён в TypeScript 2.2, который вышел в феврале 2017 года – раньше для определения типа нужно было либо использовать any, либо писать интерфейсы.
+
+Также, в TypeScript существует тип Object, который включает в себя все JavaScript-объекты. Такой тип подразумевает наличие метода hasOwnProperty и других стандартных методов у объекта.
+```js
+const isObject: object = 1;
+// Error → Type '1' is not assignable to type 'object'.
+
+const isObject: object = {};
+const isObject: Object = 1;
+const isObject: Object = {};
+```
+
+### Union
+	
+Объединения или union не являются собственно типом данных, но они позволяют комбинировать или объединить другие типы. Так, с помощью объединений можно определить переменную, которая может хранить значение двух или более типов:
+```js	
+let id : number | string;
+id = "1345dgg5";
+console.log(id); // 1345dgg5
+id = 234;
+console.log(id);  // 234
+```
+Чтобы определить все типы, которые должно представлять переменная, все эти типы разделяются прямой чертой: number | string. В данном случае переменная id может представлять как тип string, то есть строку, так и число.
+	
+Подобным образом можно использовать union для определения параметров функции:
+```js	
+const printId = (id: number|string) => {
+    console.log(`Id: ${id}`);
+}
+```
