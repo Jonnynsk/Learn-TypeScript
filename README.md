@@ -197,3 +197,16 @@ type Human = {firstName: string, age: number, height: number}
 ```js	
 const human: Human = {firstName: ‘Franz’, age: 32, height: 185}
 ```
+	
+# Функции
+```js	
+const createPassword = (name, age) => `${name}${age}` // обычная функция в JavaScript
+createPassword('Jack', 30) // 'Jack30'
+```
+В TypeScript нам нужно описать аргументы функции: 
+```js		
+const createPassword = (name: string, age: number) => `${name}${age}`
+Для большей гибкости, мы можем добавить тип Union в аргументы.
+const createPassword = (name: string, age: number | sting) => `${name}${age}` // Теперь age может быть, как строкой, так и числом.
+createPassword('Jack', '30') // 'Jack30'	
+```
