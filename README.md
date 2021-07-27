@@ -203,17 +203,29 @@ const human: Human = {firstName: ‘Franz’, age: 32, height: 185}
 const createPassword = (name, age) => `${name}${age}` // обычная функция в JavaScript
 createPassword('Jack', 30) // 'Jack30'
 ```
-В TypeScript нам нужно описать аргументы функции: 
+В TypeScript нам нужно описать параметры функции: 
 ```js		
 const createPassword = (name: string, age: number) => `${name}${age}`
+createPassword('Jack', 30) // 'Jack30'
 ```	
-Для большей гибкости, мы можем добавить тип Union в аргументы.
+Для большей гибкости, мы можем добавить тип Union в параметры.
 ```js
 const createPassword = (name: string, age: number | sting) => `${name}${age}` // Теперь age может быть, как строкой, так и числом.
 createPassword('Jack', '30') // 'Jack30'	
 ```
-В функциях аргументы могут быть заданы по default:
+В функциях параметры могут быть заданы по default:
 ```js
 const createPassword = (name: string = 'Max', age: number | sting = 28) => `${name}${age}` 
 createPassword() // 'Max28'
+```
+### Опциональный параметр
+
+В JavaScript все параметры необязательны, и пользователи могут пропускать их, если нужно. В таких случаях значение пропущенных параметров принимается за undefined. В TypeScript тоже можно добиться этого: для этого в конце параметра, который нужно сделать необязательным, добавляется ?.
+```js	
+const createPassword = (name: string, age: number) => `${name}${age}`
+createPassword('Jack') // Если мы передадим только аргумент name, то получим ошибку. 
+```
+```js	
+const createPassword = (name: string, age?: number) => `${name}${age}`
+createPassword('Jack') // 'Jack'
 ```
