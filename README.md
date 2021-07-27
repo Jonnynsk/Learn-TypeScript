@@ -198,7 +198,7 @@ type Human = {firstName: string, age: number, height: number}
 const human: Human = {firstName: ‘Franz’, age: 32, height: 185}
 ```
 	
-# Функции
+## Функции
 ```js	
 const createPassword = (name, age) => `${name}${age}` // обычная функция в JavaScript
 createPassword('Jack', 30) // 'Jack30'
@@ -218,6 +218,11 @@ createPassword('Jack', '30') // 'Jack30'
 const createPassword = (name: string = 'Max', age: number | sting = 28) => `${name}${age}` 
 createPassword() // 'Max28'
 ```
+
+### Rest оператор
+	
+
+	
 ### Опциональный параметр
 
 В JavaScript все параметры необязательны, и пользователи могут пропускать их, если нужно. В таких случаях значение пропущенных параметров принимается за undefined. В TypeScript тоже можно добиться этого: для этого в конце параметра, который нужно сделать необязательным, добавляется ?.
