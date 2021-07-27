@@ -206,7 +206,14 @@ createPassword('Jack', 30) // 'Jack30'
 В TypeScript нам нужно описать аргументы функции: 
 ```js		
 const createPassword = (name: string, age: number) => `${name}${age}`
+```	
 Для большей гибкости, мы можем добавить тип Union в аргументы.
+```js
 const createPassword = (name: string, age: number | sting) => `${name}${age}` // Теперь age может быть, как строкой, так и числом.
 createPassword('Jack', '30') // 'Jack30'	
+```
+В функциях аргументы могут быть заданы по default:
+```js
+const createPassword = (name: string = 'Max', age: number | sting = 28) => `${name}${age}` 
+createPassword() // 'Max28'
 ```
