@@ -221,11 +221,11 @@ createPassword() // 'Max28'
 
 ### Rest оператор
 ```js
-const Greet = (greeting: string, ...names: string[]) => { // или ...names: Array<string>
-    return greeting + " " + names.join(", ") + "!";
+const greet = (greeting: string, ...names: string[]) => { // или ...names: Array<string>
+    return `${greeting} ${names.join(", ")}!`
 }
-Greet("Hello", "Steve", "Bill"); // "Hello Steve, Bill!"
-Greet("Hello"); // "Hello !"
+greet("Hello", "Steve", "Bill"); // "Hello Steve, Bill!"
+greet("Hello"); // "Hello!"
 ```	
 Rest оператор должен стоять последним в параметрах функции, иначе будет ошибка.
 	
