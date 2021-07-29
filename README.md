@@ -222,7 +222,16 @@ createPassword() // 'Max28'
 ```js
 const sum = (first: number, second: number): number => first + second 
 ```
+Чтобы функцию присвоить переменной, нам нужно для начала описать эту переменную: 
+```js	
+let myFunc: (firstArg: string) => void
 	
+function oldFunc(name: string): void {
+	alert(`Hello, ${name}, nice to meet you!`)		
+}
+
+myFunc = oldFunc
+```	
 ### Rest оператор
 ```js
 const greet = (greeting: string, ...names: string[]) => { // или ...names: Array<string>
