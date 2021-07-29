@@ -168,6 +168,18 @@ const isObject: object = {};
 const isObject: Object = 1;
 const isObject: Object = {};
 ```
+Чтобы типизировать объект, можно воспользоваться объявлением interface: 
+```js
+interface User { // описываем какие свойства и типы будут в объекте.
+  name: string;
+  id: number;
+}
+	
+const user: User = { // и после декларирования переменной, мы добавим наш interface. 
+  name: "Hayes",
+  id: 0,
+}
+```
 
 ### Union
 	
