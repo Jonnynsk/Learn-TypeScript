@@ -218,7 +218,11 @@ createPassword('Jack', '30') // 'Jack30'
 const createPassword = (name: string = 'Max', age: number | sting = 28) => `${name}${age}` 
 createPassword() // 'Max28'
 ```
-
+После параметров функции мы можем записать возвращаемый тип:
+```js
+const sum = (first: number, second: number): number => first + second 
+```
+	
 ### Rest оператор
 ```js
 const greet = (greeting: string, ...names: string[]) => { // или ...names: Array<string>
