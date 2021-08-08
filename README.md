@@ -352,3 +352,20 @@ function getter<T>(data: T): T {
 ```tsx
 const Title:React.FC = () => <h1>Hello world!</h1>
 ```
+Прокидываение props
+```tsx
+const Title:React.FC<{title: string}> = ({title}) => <h1>{title}</h1>
+	
+const App = () => <Title title='My page'/>
+```
+Если props слишком много, то лучше воспользоваться type или interface.
+```tsx
+type TitleProps = {
+	title: string	
+}
+
+const Title = ({title}: TitleProps) => <h1>{title}</h1>
+:React.FC можно не писать, так как данный компонент можно рассматривать, как функцию, 
+а саму функцию мы уже описали, с помощью type.
+const App = () => <Title title='My page'/>
+```
