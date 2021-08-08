@@ -361,7 +361,8 @@ const App = () => <Title title='My page'/>
 Если props слишком много, то лучше воспользоваться type или interface.
 ```tsx
 type TitleProps = {
-	title: string	
+	title: string,
+	greet?: string
 }
 
 const Title = ({title}: TitleProps) => <h1>{title}</h1>
@@ -370,3 +371,5 @@ const App = () => <Title title='My page'/>
 ```
 :React.FC можно не писать, так как данный компонент можно рассматривать, как функцию, 
 а саму функцию мы уже описали, с помощью type.
+
+## Типизация событий
