@@ -346,3 +346,9 @@ function getter<T>(data: T): T {
 ```	
 	
 # TypeScript in React.js
+	
+## Типизация функциональных компонентов
+	
+```tsx
+const Title:React.FC = () => <h1>Hello world!</h1>
+```
