@@ -373,3 +373,10 @@ const App = () => <Title title='My page'/>
 а саму функцию мы уже описали, с помощью type.
 
 ## Типизация событий
+```tsx	
+const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+	console.log(`${e.clientX}, ${e.clientY}`)
+}
+
+<button onClick={handleClick}>Click</button>
+```
