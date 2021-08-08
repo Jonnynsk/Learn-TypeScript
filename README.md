@@ -373,10 +373,18 @@ const App = () => <Title title='My page'/>
 а саму функцию мы уже описали, с помощью type.
 
 ## Типизация событий
+	
+### button и link
 ```tsx	
-const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+const handleClick = (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
 	console.log(`${e.clientX}, ${e.clientY}`)
 }
 
 <button onClick={handleClick}>Click</button>
+<a href='#' onClick={handleClick}>Link</a>
 ```
+
+## Типизация элементов
+	
+	
+
