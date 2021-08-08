@@ -344,4 +344,4 @@ function getter<T>(data: T): T {
 	return data	
 }
 	
-
+# TypeScript in React.js
