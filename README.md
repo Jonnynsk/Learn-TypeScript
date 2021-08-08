@@ -329,3 +329,19 @@ class User {
 const jorgen = new User(1, 'Jorgen', 30);	
 jorgen; // {id: 1, name: 'Jorgen', age: 30}
 ```
+	
+## Generics 
+	
+Это обозначение типов в общем виде. Они позволяют создавать компоненты, которые способны работать с различными типами. 
+	
+ES 6 syntax
+```js
+const getter = <T>(data: T): T => data  // T - type
+```
+ES 5 syntax
+```js
+function getter<T>(data: T): T {
+	return data	
+}
+	
+
